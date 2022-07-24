@@ -20,13 +20,12 @@ background = pygame.image.load('img/background.jpg')
 mixer.music.load("sound/background_music.wav")
 mixer.music.play(-1)
 
-
 font = pygame.font.Font('freesansbold.ttf', 34)
 textsurface = font.render('Game is paused', False, (255, 255, 255))
 textsurface2 = font.render('Click P to continue', False, (255, 255, 255))
 
-
-
+font1 = pygame.font.Font('freesansbold.ttf', 34)
+textsurface3 = font.render('Game is muted', False, (255, 255, 255))
 
 pygame.display.set_caption("Space Destroyer")
 icon = pygame.image.load('img/logo.png')
@@ -63,19 +62,12 @@ def pause():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_p:
                     paused = False
+            pygame.mixer.music.pause()
      
         screen.blit(textsurface,(210, 400))
         screen.blit(textsurface2,(200, 450))
         pygame.display.flip()
-                    
 
-def show_score(x, y):
-    score = font.render("Score : " + str(score_value), True, (255, 255, 255))
-    screen.blit(score, (x, y))
-
-def game_over_text():
-    over_text = over_font.render("GAME OVER", True, (255, 255, 255))
-    screen.blit(over_text, (200, 250))
 
 def player(x, y):
     screen.blit(playerImage, (x, y))
@@ -120,10 +112,7 @@ while running:
             if event.key == pygame.K_n:
                     pygame.mixer.music.unpause()
             if event.key == pygame.K_p:
-                pause()
-
-           
-
+                    pause()
   
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
