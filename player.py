@@ -1,3 +1,4 @@
+from email import message
 import pygame
 from pygame import mixer
 import math
@@ -42,6 +43,26 @@ text_first = 10
 text_second = 10
 over_font = pygame.font.Font('freesansbold.ttf', 54)
 
+pygame.font.init() # you have to call this at the start, 
+                   # if you want to use this module.
+my_font = pygame.font.SysFont('Comic Sans MS', 30)
+text_surface = my_font.render('Some Text', False, (0, 0, 0))
+
+
+def pause():
+    paused = True
+
+    while paused:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                quit()
+
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_q:
+                    paused = False
+
+
 def show_score(x, y):
     score = font.render("Score : " + str(score_value), True, (255, 255, 255))
     screen.blit(score, (x, y))
@@ -59,6 +80,7 @@ def fire_bullet(x, y):
     screen.blit(bulletImage, (x + 40, y + 10))
 
 running = True
+
 while running:
 
     screen.fill((0, 0, 0))
@@ -72,7 +94,7 @@ while running:
         # Check for QUIT event. If QUIT, then set running to false.
         elif event.type == QUIT:
             running = False
-
+        
         speed_left = -1
         speed_right = 1
         
@@ -91,6 +113,10 @@ while running:
                     pygame.mixer.music.pause()
             if event.key == pygame.K_n:
                     pygame.mixer.music.unpause()
+            if event.key == pygame.K_p:
+                    pause()
+           
+
   
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
@@ -113,3 +139,4 @@ while running:
     player(playerX, playerY)
     # show_score(text_first, text_second)
     pygame.display.update()
+
