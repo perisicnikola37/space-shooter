@@ -54,15 +54,17 @@ def pause():
     paused = True
 
     while paused:
+        pygame.mixer.music.pause()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
-
+                
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_p:
+                    pygame.mixer.music.unpause()
                     paused = False
-            pygame.mixer.music.pause()
+
      
         screen.blit(textsurface,(210, 400))
         screen.blit(textsurface2,(200, 450))
