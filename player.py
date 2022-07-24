@@ -1,4 +1,3 @@
-from email import message
 import pygame
 from pygame import mixer
 import math
@@ -20,6 +19,14 @@ background = pygame.image.load('img/background.jpg')
 
 mixer.music.load("sound/background_music.wav")
 mixer.music.play(-1)
+
+
+font = pygame.font.Font('freesansbold.ttf', 34)
+textsurface = font.render('Game is paused', False, (255, 255, 255))
+textsurface2 = font.render('Click P to continue', False, (255, 255, 255))
+
+
+
 
 pygame.display.set_caption("Space Destroyer")
 icon = pygame.image.load('img/logo.png')
@@ -43,11 +50,6 @@ text_first = 10
 text_second = 10
 over_font = pygame.font.Font('freesansbold.ttf', 54)
 
-pygame.font.init() # you have to call this at the start, 
-                   # if you want to use this module.
-my_font = pygame.font.SysFont('Comic Sans MS', 30)
-text_surface = my_font.render('Some Text', False, (0, 0, 0))
-
 
 def pause():
     paused = True
@@ -59,9 +61,13 @@ def pause():
                 quit()
 
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_q:
+                if event.key == pygame.K_p:
                     paused = False
-
+     
+        screen.blit(textsurface,(210, 400))
+        screen.blit(textsurface2,(200, 450))
+        pygame.display.flip()
+                    
 
 def show_score(x, y):
     score = font.render("Score : " + str(score_value), True, (255, 255, 255))
@@ -114,7 +120,8 @@ while running:
             if event.key == pygame.K_n:
                     pygame.mixer.music.unpause()
             if event.key == pygame.K_p:
-                    pause()
+                pause()
+
            
 
   
