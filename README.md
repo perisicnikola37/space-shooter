@@ -2,6 +2,9 @@
 
 >Space Shooter has more levels. On the third level, there is a boss fight. The Player has only three lives! Play to survive! Save the galaxy from alien shooter in classic galaxy shooter-classic arcade game. - Captain! We are in danger! 
 
+### In cooperation with:
+- https://github.com/cchiper048
+
 ![schooldash-dahboard-page](https://i.postimg.cc/xdHG7mSv/1.png)
 ![schooldash-dahboard-page](https://i.postimg.cc/52XSBG7k/2.png)
 
