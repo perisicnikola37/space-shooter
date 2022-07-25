@@ -122,6 +122,8 @@ while running:
         if event.type == QUIT:
             running = False
         if event.type == KEYDOWN:  # check for keydown
+            if event.key == K_ESCAPE:
+                running = False
             if event.key == K_LEFT:
                 player_keys["K_LEFT"] = True
             if event.key == K_RIGHT:

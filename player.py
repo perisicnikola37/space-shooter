@@ -11,7 +11,7 @@ from pygame.locals import (
 class PlayerBullet(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super(PlayerBullet, self).__init__()
-        self.surf = pygame.image.load(f"./utils/bullet.png").convert_alpha()
+        self.surf = pygame.image.load("./utils/bullet.png").convert_alpha()
         # self.surf = pygame.Surface((16, 16))
         # self.surf.fill((255, 0, 0))
         self.rect = self.surf.get_rect(
