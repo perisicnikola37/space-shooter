@@ -22,7 +22,7 @@ from pygame.locals import (
 
 # Initialize pygame
 pygame.init()
-pygame.display.set_caption('Space Destroyer')
+pygame.display.set_caption('Space Shooter')
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 icon = pygame.image.load("./utils/player.png").convert_alpha()
 pygame.display.set_icon(icon)
@@ -35,7 +35,7 @@ font = pygame.font.Font('freesansbold.ttf', 34)
 text_surface = font.render('Game is paused', False, (255, 255, 255))
 text_surface2 = font.render('Click P to continue', False, (255, 255, 255))
 
-meni_surface = font.render('Space Destroyer', False, (255, 255, 255))
+meni_surface = font.render('Space Shooter', False, (255, 255, 255))
 start_game = font.render('Press Enter to start', False, (255, 255, 255))
 
 enemies = pygame.sprite.Group()
