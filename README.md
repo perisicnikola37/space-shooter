@@ -5,6 +5,4 @@
 ### In cooperation with:
 - https://github.com/cchiper048
 
-![schooldash-dahboard-page](https://i.postimg.cc/xdHG7mSv/1.png)
-![schooldash-dahboard-page](https://i.postimg.cc/52XSBG7k/2.png)
-
+<a href="https://dzonidevv.itch.io/caszczc"><img src="https://i.postimg.cc/zG84BfYW/space-shooter.png"/></a>
