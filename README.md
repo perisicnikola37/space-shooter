@@ -5,4 +5,4 @@
 ### In cooperation with:
 - https://github.com/cchiper048
 
-<a href="https://dzonidevv.itch.io/caszczc"><img src="https://i.postimg.cc/zG84BfYW/space-shooter.png"/></a>
+<a href="https://dzonidevv.itch.io/caszczc"><img src="https://img.itch.zone/aW1nLzk2MTQyNTcucG5n/347x500/mgMKzh.png"/></a>
